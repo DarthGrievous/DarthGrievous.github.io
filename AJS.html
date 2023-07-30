@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro Jimenez Sanchez - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #101010;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        nav a.active {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-pic-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-pic-wrapper {
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-pic-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Define the aspect ratio (16:9 in this example) */
+        .profile-pic-wrapper::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; /* 16:9 aspect ratio (56.25 = 9 / 16 * 100) */
+        }
+
+        .intro {
+            background-color: #666;
+            padding: 50px 0;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .certificate img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+            border: 3px solid #444;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .certificate p {
+            margin-top: 10px;
+        }
+        
+        nav a:hover {
+            color: #ffd700;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hide the certificate section by default
+            var certificateSection = document.getElementById("certificates");
+
+            // Function to show the certificates section and hide other sections
+            function showCertificates() {
+                certificateSection.style.display = "block";
+                document.getElementById("about").style.display = "none";
+                document.querySelector("header").style.display = "block";
+
+                // Update the active link in the navigation
+                document.querySelector('a[href="#about"]').classList.remove("active");
+                document.querySelector('a[href="#certificates"]').classList.add("active");
+            }
+
+            // Function to show the home page section and hide other sections
+            function showHomePage() {
+                certificateSection.style.display = "none";
+                document.getElementById("about").style.display = "block";
+                document.querySelector("header").style.display = "block";
+
+                // Update the active link in the navigation
+                document.querySelector('a[href="#about"]').classList.add("active");
+                document.querySelector('a[href="#certificates"]').classList.remove("active");
+            }
+
+            // Event listeners for the navigation links
+            var certificatesLink = document.querySelector('a[href="#certificates"]');
+            var homePageLink = document.querySelector('a[href="#about"]');
+
+            certificatesLink.addEventListener("click", function (event) {
+                showCertificates();
+                event.preventDefault(); // Prevent the default link behavior
+            });
+
+            homePageLink.addEventListener("click", function (event) {
+                showHomePage();
+                event.preventDefault(); // Prevent the default link behavior
+            });
+
+            // Show the home page by default
+            showHomePage();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Alejandro Jimenez Sanchez</h1>
+    </header>
+
+    <nav>
+        <a href="#about" class="active">Home Page</a>
+        <a href="#certificates">Certificates</a>
+        <!-- Add more navigation links if needed -->
+    </nav>
+
+    <!-- Add the profile picture slot here, right above the "About Me" section -->
+    <section class="profile-pic-container" id="about">
+        <div class="profile-pic-wrapper">
+            <!-- Replace "link_to_profile_pic.jpg" with the actual URL or file path of your profile picture -->
+            <img src="link_to_profile_pic.jpg" alt="Alejandro Jimenez Sanchez">
+        </div>
+        <div class="intro">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Alejandro Jimenez Sanchez, a passionate learner in the field of computer science. I'm currently working on CS50 certificates, and I have completed the CS50 Python Course and the Intro to AI Course. I'm excited to showcase my accomplishments and knowledge through this portfolio.
+            </p>
+        </div>
+    </section>
+
+    <section id="certificates">
+        <h2>My CS50 Certificates</h2>
+
+        <!-- CS50 Python Course Certificate -->
+        <div class="certificate">
+            <img src="link_to_cs50_python_certificate_image.jpg" alt="CS50 Python Course Certificate">
+            <p>CS50 Python Course Certificate</p>
+        </div>
+
+        <!-- Intro to AI Course Certificate -->
+        <div class="certificate">
+            <img src="link_to_intro_to_ai_certificate_image.jpg" alt="Intro to AI Course Certificate">
+            <p>Intro to AI Course Certificate</p>
+        </div>
+
+        <!-- CIW Internet Business Associate Certificate -->
+        <div class="certificate">
+            <a href="https://cp.certmetrics.com/ciwcerts/en/public/verify/credential">
+            <img src="ciw/CIW Internet Business Associate certificate-1.png" alt="CIW Internet Business Associate Certificate" height="500">
+            </a>
+            <p>CIW Internet Business Associate Certificate</p>
+        </div>
+
+        <!-- Autodesk Inventor Certificate -->
+        <div class="certificate">
+            <a href="verify.certiport.com">
+            <img src="autodesk/Autodesk Certified User Inventor.pdf" alt="Autodesk Inventor Certificate" height="550">
+            </a>
+            <p>Autodesk Inventor Certificate</p>
+        </div>
+
+        <!-- Introduction to Blockchain Certificate -->
+        <div class="certificate">
+            <a href="https://courses.edx.org/certificates/0238308f1b6b43eba44fd2bc3bc6e35a">
+            <img src="edx/IBM/IBM.png" alt="Introduction to Blockchain Certificate" height="450">
+            </a>
+            <p>Introduction to Blockchain Certificate</p>
+        </div>
+
+        <!-- Add more certificates as needed -->
+
+    </section>
+
+    <!-- ... (Add more sections as needed) ... -->
+
+</body>
+</html>
