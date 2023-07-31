@@ -104,6 +104,52 @@
             margin-bottom: 20px;
         }
 
+        /* Specific certificate image heights */
+        .certificate img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Set the maximum height for each certificate image */
+        .certificate img.ciw-certificate {
+            max-height: 600px; /* Height for CIW certificate at 100% */
+        }
+
+        .certificate img.autodesk-certificate {
+            max-height: 600px; /* Height for Autodesk certificate at 100% */
+        }
+
+        .certificate img.ibm-certificate {
+            max-height: 500px; /* Height for IBM certificate at 100% */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media screen and (max-width: 600px) {
+            /* You can adjust the "max-width" value (e.g., 600px) as needed */
+
+            .certificate img {
+                /* Set the maximum height using viewport-relative units */
+                max-height: 50vh; /* Adjust this value as needed */
+            }
+
+            /* Adjust the height for the CIW certificate on smaller screens */
+            .certificate img.ciw-certificate {
+                max-height: 30vh; /* Adjust this value as needed */
+            }
+
+            /* Adjust the height for the Autodesk certificate on smaller screens */
+            .certificate img.autodesk-certificate {
+                max-height: 25vh; /* Adjust this value as needed */
+            }
+
+            /* Adjust the height for the IBM certificate on smaller screens */
+            .certificate img.ibm-certificate {
+                max-height: 20vh; /* Adjust this value as needed */
+            }
+        }
+        
         nav a:hover {
             color: #ffd700;
             font-weight: bold;
@@ -190,12 +236,14 @@
 
         <!-- CS50 Python Course Certificate -->
         <div class="certificate">
-            <img src="link_to_cs50_python_certificate_image.jpg" alt="CS50 Python Course Certificate" height="300">
+            <img class="harvard-certificate" src="link_to_cs50_python_certificate_image.jpg" alt="CS50 Python Course Certificate">
+            <p>CS50 Python Course Certificate</p>
         </div>
 
         <!-- Intro to AI Course Certificate -->
         <div class="certificate">
-            <!-- Your existing code for the Intro to AI Course Certificate here -->
+            <img class="harvard-certificate" src="link_to_cs50_introduction_to_ai_certificate_image.jpg" alt="Intro to AI Course Certificate">
+            <p>Intro to AI Course Certificate</p>
         </div>
 
         <!-- Grey bar for IBM certificates -->
@@ -206,8 +254,9 @@
         <!-- Introduction to Blockchain Certificate -->
         <div class="certificate">
             <a href="https://courses.edx.org/certificates/0238308f1b6b43eba44fd2bc3bc6e35a">
-            <img src="edx/IBM/IBM.png" alt="Introduction to Blockchain Certificate" height="330">
-            </a>  
+                <img class="ibm-certificate" src="edx/IBM/IBM.png" alt="Introduction to Blockchain Certificate">
+                <p>Introduction to Blockchain Certificate</p>
+            </a>
         </div>
 
         <!-- Grey bar for Autodesk certificates -->
@@ -217,9 +266,9 @@
 
         <!-- Autodesk Inventor Certificate -->
         <div class="certificate">
-            <!--href="verify.certiport.com" -->
-            <img src="autodesk/Autodesk Certified User Inventor.pdf" alt="Autodesk Inventor Certificate" height="400">
-            </a>        
+            <!-- href="verify.certiport.com" -->
+            <img class="autodesk-certificate" src="autodesk/Autodesk Certified User Inventor.pdf" alt="Autodesk Inventor Certificate">
+            <p>Autodesk Inventor Certificate</p>
         </div>
 
         <!-- Grey bar for CIW certificates -->
@@ -230,15 +279,15 @@
         <!-- CIW Internet Business Associate Certificate -->
         <div class="certificate">
             <a href="https://cp.certmetrics.com/ciwcerts/en/public/verify/credential">
-            <img src="ciw/CIW Internet Business Associate certificate-1.png" alt="CIW Internet Business Associate Certificate" height="400">
-            </a>  
+                <img class="ciw-certificate" src="ciw/CIW Internet Business Associate certificate-1.png" alt="CIW Internet Business Associate Certificate">
+                <p>CIW Internet Business Associate Certificate</p>
+            </a>
         </div>
 
         <!-- Add more certificates as needed -->
 
     </section>
 
-    <!-- ... (Add more sections as needed) ... -->
-
+    <!-- ... (continue with the rest of the code) ... -->
 </body>
 </html>
