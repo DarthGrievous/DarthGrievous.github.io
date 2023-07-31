@@ -91,7 +91,19 @@
         .certificate p {
             margin-top: 10px;
         }
-        
+
+        /* Grey bar styles */
+        .grey-bar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Spacing between certificates */
+        .certificate {
+            margin-bottom: 20px;
+        }
+
         nav a:hover {
             color: #ffd700;
             font-weight: bold;
@@ -171,40 +183,55 @@
     <section id="certificates">
         <h2>My CS50 Certificates</h2>
 
+        <!-- Grey bar for Harvard certificates -->
+        <div class="grey-bar">
+            <h3>Harvard University</h3>
+        </div>
+
         <!-- CS50 Python Course Certificate -->
         <div class="certificate">
-            <img src="link_to_cs50_python_certificate_image.jpg" alt="CS50 Python Course Certificate">
-            <p>CS50 Python Course Certificate</p>
+            <img src="link_to_cs50_python_certificate_image.jpg" alt="CS50 Python Course Certificate" height="300">
         </div>
 
         <!-- Intro to AI Course Certificate -->
         <div class="certificate">
-            <img src="link_to_intro_to_ai_certificate_image.jpg" alt="Intro to AI Course Certificate">
-            <p>Intro to AI Course Certificate</p>
+            <!-- Your existing code for the Intro to AI Course Certificate here -->
         </div>
 
-        <!-- CIW Internet Business Associate Certificate -->
-        <div class="certificate">
-            <a href="https://cp.certmetrics.com/ciwcerts/en/public/verify/credential">
-            <img src="ciw/CIW Internet Business Associate certificate-1.png" alt="CIW Internet Business Associate Certificate" height="500">
-            </a>
-            <p>CIW Internet Business Associate Certificate</p>
-        </div>
-
-        <!-- Autodesk Inventor Certificate -->
-        <div class="certificate">
-            <a href="verify.certiport.com">
-            <img src="autodesk/Autodesk Certified User Inventor.pdf" alt="Autodesk Inventor Certificate" height="550">
-            </a>
-            <p>Autodesk Inventor Certificate</p>
+        <!-- Grey bar for IBM certificates -->
+        <div class="grey-bar">
+            <h3>IBM</h3>
         </div>
 
         <!-- Introduction to Blockchain Certificate -->
         <div class="certificate">
             <a href="https://courses.edx.org/certificates/0238308f1b6b43eba44fd2bc3bc6e35a">
-            <img src="edx/IBM/IBM.png" alt="Introduction to Blockchain Certificate" height="400">
-            </a>
-            <p>Introduction to Blockchain Certificate</p>
+            <img src="edx/IBM/IBM.png" alt="Introduction to Blockchain Certificate" height="330">
+            </a>  
+        </div>
+
+        <!-- Grey bar for Autodesk certificates -->
+        <div class="grey-bar">
+            <h3>Autodesk</h3>
+        </div>
+
+        <!-- Autodesk Inventor Certificate -->
+        <div class="certificate">
+            <!--href="verify.certiport.com" -->
+            <img src="autodesk/Autodesk Certified User Inventor.pdf" alt="Autodesk Inventor Certificate" height="400">
+            </a>        
+        </div>
+
+        <!-- Grey bar for CIW certificates -->
+        <div class="grey-bar">
+            <h3>CIW</h3>
+        </div>
+
+        <!-- CIW Internet Business Associate Certificate -->
+        <div class="certificate">
+            <a href="https://cp.certmetrics.com/ciwcerts/en/public/verify/credential">
+            <img src="ciw/CIW Internet Business Associate certificate-1.png" alt="CIW Internet Business Associate Certificate" height="400">
+            </a>  
         </div>
 
         <!-- Add more certificates as needed -->
