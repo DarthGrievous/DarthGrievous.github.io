@@ -54,6 +54,7 @@
             width: 100%;
             position: relative;
             overflow: hidden;
+            margin: 0 auto; /* Center the image */
         }
 
         .profile-pic-wrapper img {
@@ -72,13 +73,19 @@
         .intro {
             background-color: #666;
             padding: 50px 0;
+            text-align: left; /* Align text to the left of the image */
+            max-width: 800px;
+            margin: 0 auto; /* Center the "About Me" section */
+        }
+ 
+        .intro h2 {
+            margin-top: 0;
         }
 
         .intro p {
-            max-width: 800px;
             margin: 0 auto;
         }
-
+       
         .certificate img {
             max-width: 100%;
             display: block;
@@ -123,6 +130,10 @@
 
         .certificate img.ibm-certificate {
             max-height: 500px; /* Height for IBM certificate at 100% */
+        }
+        
+        .certificate-text {
+            color: #ffffff; /* Replace #ff0000 with the color you want */
         }
 
         /* Responsive adjustments for smaller screens */
@@ -216,7 +227,7 @@
     <section class="profile-pic-container" id="about">
         <div class="profile-pic-wrapper">
             <!-- Replace "link_to_profile_pic.jpg" with the actual URL or file path of your profile picture -->
-            <img src="link_to_profile_pic.jpg" alt="Alejandro Jimenez Sanchez">
+            <img src="placeholders/desktop-wallpaper-cute-baby-cat-cute-cat-kitten-thumbnail.jpg" alt="Alejandro Jimenez Sanchez">
         </div>
         <div class="intro">
             <h2>About Me</h2>
@@ -227,7 +238,7 @@
     </section>
 
     <section id="certificates">
-        <h2>My CS50 Certificates</h2>
+        <h2 class="certificate-text">My CS50 Certificates</h2>
 
         <!-- Grey bar for Harvard certificates -->
         <div class="grey-bar">
@@ -236,16 +247,16 @@
 
         <!-- CS50 Python Course Certificate -->
         <div class="certificate">
-            <img class="harvard-certificate" src="link_to_cs50_python_certificate_image.jpg" alt="CS50 Python Course Certificate">
-            <p>CS50 Python Course Certificate</p>
+            <img class="harvard-certificate" src="placeholders/sunglasses_cat.jpeg" alt="CS50 Python Course Certificate">
+            <p class="certificate-text">CS50 Python Course Certificate</p>
         </div>
-
-        <!-- Intro to AI Course Certificate -->
+        <!--
+        !-- Intro to AI Course Certificate --
         <div class="certificate">
             <img class="harvard-certificate" src="link_to_cs50_introduction_to_ai_certificate_image.jpg" alt="Intro to AI Course Certificate">
-            <p>Intro to AI Course Certificate</p>
+            <p class="certificate-text">Intro to AI Course Certificate</p>
         </div>
-
+        -->
         <!-- Grey bar for IBM certificates -->
         <div class="grey-bar">
             <h3>IBM</h3>
@@ -255,7 +266,7 @@
         <div class="certificate">
             <a href="https://courses.edx.org/certificates/0238308f1b6b43eba44fd2bc3bc6e35a">
                 <img class="ibm-certificate" src="edx/IBM/IBM.png" alt="Introduction to Blockchain Certificate">
-                <p>Introduction to Blockchain Certificate</p>
+                <p class="certificate-text">Introduction to Blockchain Certificate</p>
             </a>
         </div>
 
@@ -268,7 +279,7 @@
         <div class="certificate">
             <!-- href="verify.certiport.com" -->
             <img class="autodesk-certificate" src="autodesk/Autodesk Certified User Inventor.pdf" alt="Autodesk Inventor Certificate">
-            <p>Autodesk Inventor Certificate</p>
+            <p class="certificate-text">Inventor Certificate</p>
         </div>
 
         <!-- Grey bar for CIW certificates -->
@@ -280,8 +291,8 @@
         <div class="certificate">
             <a href="https://cp.certmetrics.com/ciwcerts/en/public/verify/credential">
                 <img class="ciw-certificate" src="ciw/CIW Internet Business Associate certificate-1.png" alt="CIW Internet Business Associate Certificate">
-                <p>CIW Internet Business Associate Certificate</p>
             </a>
+            <p class="certificate-text">CIW Internet Business Associate Certificate</p>
         </div>
 
         <!-- Add more certificates as needed -->
