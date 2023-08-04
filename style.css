@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #101010;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+nav a.active {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Grey bar styles */
+.grey-bar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Spacing between certificates */
+.certificate {
+    margin-bottom: 20px;
+}
+
+.certificate img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Set the maximum height for each certificate image */
+.certificate img.ciw-certificate {
+    max-height: 600px; /* Height for CIW certificate at 100% */
+}
+
+.certificate img.autodesk-certificate {
+    max-height: 600px; /* Height for Autodesk certificate at 100% */
+}
+
+.certificate img.ibm-certificate {
+    max-height: 500px; /* Height for IBM certificate at 100% */
+}
+
+.certificate-text {
+    color: #ffffff; /* Replace #ff0000 with the color you want */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    /* You can adjust the "max-width" value (e.g., 600px) as needed */
+
+    .certificate img {
+        /* Set the maximum height using viewport-relative units */
+        max-height: 50vh; /* Adjust this value as needed */
+    }
+
+    /* Adjust the height for the CIW certificate on smaller screens */
+    .certificate img.ciw-certificate {
+        max-height: 30vh; /* Adjust this value as needed */
+    }
+
+    /* Adjust the height for the Autodesk certificate on smaller screens */
+    .certificate img.autodesk-certificate {
+        max-height: 25vh; /* Adjust this value as needed */
+    }
+
+    /* Adjust the height for the IBM certificate on smaller screens */
+    .certificate img.ibm-certificate {
+        max-height: 20vh; /* Adjust this value as needed */
+    }
+}
+
+nav a:hover {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* New CSS code for the "About Me" section */
+.profile-pic-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Align to the right */
+    background-color: #444; /* Replace #444 with the desired grey color */
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-pic-wrapper {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.profile-pic-wrapper img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10%;
+    display: block;
+}
+
+.intro {
+    color: #fff; /* Replace #fff with the desired text color */
+    transform: rotate(0deg); /* Rotate the "About Me" text vertically */
+    transform-origin: left top; /* Set the rotation origin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding-top: 80px; /* Adjust the distance from the profile picture */ 
+}
+
+/* Style for the slim rectangular box at the bottom */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+/* Moves links to the right and makes it into a smaller smoother box.
+.footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    z-index: 9999;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.footer:hover {
+opacity: 1;
+}
+*/
+.slim-rectangular-box {
+    display: flex;
+    justify-content: center;
+}
+
+.slim-rectangular-box a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
