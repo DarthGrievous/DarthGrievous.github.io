@@ -23,9 +23,11 @@ nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 20px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-nav a.active {
+nav a.active, 
+nav a:hover {
     color: #ffd700;
     font-weight: bold;
 }
@@ -35,78 +37,67 @@ section {
     text-align: center;
 }
 
-/* Grey bar styles */
-.grey-bar {
-    background-color: #333;
+.big-grey-bar, 
+.small-grey-bar {
+    background-color: #333; 
     padding: 10px;
     text-align: center;
 }
 
-/* Spacing between certificates */
+.big-grey-bar h1, 
+.big-grey-bar h3 {
+    color: #fff;
+}
+
 .certificate {
     margin-bottom: 20px;
 }
 
 .certificate img {
     max-width: 100%;
-    width: 100%;
     height: auto;
     object-fit: contain;
 }
 
-/* Set the maximum height for each certificate image */
-.certificate img.ciw-certificate {
-    max-height: 600px; /* Height for CIW certificate at 100% */
+.certificate img.placeholder {
+    max-height: 520px;
 }
 
-.certificate img.autodesk-certificate {
-    max-height: 600px; /* Height for Autodesk certificate at 100% */
+.certificate img.pdf-resize {
+    max-height: 600px;
 }
 
-.certificate img.ibm-certificate {
-    max-height: 500px; /* Height for IBM certificate at 100% */
+.certificate img.png-resize {
+    max-height: 500px;
 }
 
 .certificate-text {
-    color: #ffffff; /* Replace #ff0000 with the color you want */
+    color: #ffffff;
 }
 
-/* Responsive adjustments for smaller screens */
 @media screen and (max-width: 600px) {
-    /* You can adjust the "max-width" value (e.g., 600px) as needed */
-
     .certificate img {
-        /* Set the maximum height using viewport-relative units */
-        max-height: 50vh; /* Adjust this value as needed */
+        max-height: 50vh;
     }
 
-    /* Adjust the height for the CIW certificate on smaller screens */
     .certificate img.ciw-certificate {
-        max-height: 30vh; /* Adjust this value as needed */
+        max-height: 30vh;
     }
 
-    /* Adjust the height for the Autodesk certificate on smaller screens */
     .certificate img.autodesk-certificate {
-        max-height: 25vh; /* Adjust this value as needed */
+        max-height: 25vh;
     }
 
-    /* Adjust the height for the IBM certificate on smaller screens */
     .certificate img.ibm-certificate {
-        max-height: 20vh; /* Adjust this value as needed */
+        max-height: 20vh;
     }
 }
 
-nav a:hover {
-    color: #ffd700;
-    font-weight: bold;
-}
-
-/* New CSS code for the "About Me" section */
 .profile-pic-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Align to the right */
-    background-color: #444; /* Replace #444 with the desired grey color */
+    justify-content: center;
+    background-color: #444;
     padding: 20px;
     border-radius: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -125,14 +116,10 @@ nav a:hover {
 }
 
 .intro {
-    color: #fff; /* Replace #fff with the desired text color */
-    transform: rotate(0deg); /* Rotate the "About Me" text vertically */
-    transform-origin: left top; /* Set the rotation origin */
-    white-space: nowrap; /* Prevent text from wrapping */
-    padding-top: 80px; /* Adjust the distance from the profile picture */ 
+    color: #fff;
+    padding-top: 80px;
 }
 
-/* Style for the slim rectangular box at the bottom */
 .footer {
     position: fixed;
     bottom: 0;
@@ -142,23 +129,7 @@ nav a:hover {
     padding: 10px;
     text-align: center;
 }
-/* Moves links to the right and makes it into a smaller smoother box.
-.footer {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    z-index: 9999;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-.footer:hover {
-opacity: 1;
-}
-*/
+
 .slim-rectangular-box {
     display: flex;
     justify-content: center;
@@ -168,4 +139,25 @@ opacity: 1;
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
+}
+
+.organization-box {
+    color: #fff;
+    border: 1px solid #d1d1d1;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;  /* Gives a hint that it's clickable */
+}
+
+.organization-box:hover {
+    color: #000;
+    background-color: #ffd700;  /* A subtle hover effect */
+}
+
+.organization-box img {
+    max-width: 100px;  /* or adjust as needed */
+    height: auto;
+    margin-bottom: 10px;  /* space between the logo and text */
 }
