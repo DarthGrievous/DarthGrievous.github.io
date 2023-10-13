@@ -3,46 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Jimenez Sanchez - EDX Certificates</title>
+    <title>Alejandro Jimenez Sanchez - edX Certificates</title>
     <link rel="stylesheet" href="../style.css"> <!-- Assuming style.css is in the root directory -->
     <!-- Add any other relevant meta tags, stylesheets, or scripts -->
 </head>
 <body>
     <header>
-        <h1>EDX Certificates</h1>
+        <h1>edX Certificates</h1>
     </header>
 
     <nav>
-        <a href="../index.html">Home Page</a>
-        <a href="../certificates_hub.html">Certificate Hub</a>
-        <a href="../projects.html">Projects</a>
+        <a href="index.html">Home Page</a>
+        <a href="certificates_hub.html" class="active">Certificates - edX</a>
+        <a href="projects.html">Projects</a>
     </nav>
+    
 
     <!-- EDX Hub Section -->
-    <div class="organization-box">
-        <a href="cs50.html">
-            <img src="../Place_holder_Photos/harvard_logo.png" alt="Harvard Logo">
-            <h2>Harvard University</h2>
-        </a>
+    <div class="organization-box" onclick="location.href='cs50.html';">
+        <img src="../Place_holder_Photos/harvard_logo.png" alt="Harvard Logo">
+        <h2>CS50</h2>
     </div>
-
-    <div class="organization-box">
-        <a href="ibm.html">
-            <img src="../Place_holder_Photos/ibm_logo.png" alt="IBM Logo">
-            <h2>IBM</h2>
-        </a>
+    
+    <div class="organization-box" onclick="location.href='ibm.html';">
+        <img src="../Place_holder_Photos/ibm_logo.png" alt="IBM Logo">
+        <h2>IBM</h2>
     </div>
 
     <!-- You can add more organizations under EDX if needed -->
     
-    <section class="footer">
-        <div class="slim-rectangular-box">
-            <a href="https://github.com/DarthGrievous" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <!-- Ensure to add your LinkedIn link or remove the anchor tag if you don't have one -->
-            <a href="YOUR_LINKEDIN_URL_HERE" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a>
-            <a href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-    </section>
+    <footer class="footer">
+        <nav>
+            <div class="slim-rectangular-box">
+                <a href="https://github.com/DarthGrievous" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/alejandro-jimenez-sanchez-653836295/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+        </nav>
+    </footer>
 </body>
 </html>
