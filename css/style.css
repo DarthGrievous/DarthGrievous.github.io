@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #101010;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;          
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    display: flex;         
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+nav a.active, 
+nav a:hover {
+    color: #ffd700; /* ffd700 == Yellow */
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    display: flex;           
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.big-grey-bar, 
+.small-grey-bar {
+    background-color: #333; 
+    padding: 10px;
+    text-align: center;
+}
+
+.big-grey-bar h1, 
+.big-grey-bar h3 {
+    color: #fff;
+}
+
+.certificate {
+    margin-bottom: 20px;
+}
+
+.certificate img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.certificate img.placeholder {
+    width: 780px;
+    height: auto;
+}
+
+.certificate img.pdf-resize {
+    max-height: 600px;
+}
+
+.certificate img.png-resize {
+    max-height: 500px;
+}
+
+.certificate img.jpg-resize {
+    max-height: 600px;
+}
+
+.certificate-text {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+    .certificate img {
+        max-height: 50vh;
+    }
+
+    .certificate img.ciw-certificate {
+        max-height: 30vh;
+    }
+
+    .certificate img.autodesk-certificate {
+        max-height: 25vh;
+    }
+
+    .certificate img.ibm-certificate {
+        max-height: 20vh;
+    }
+}
+
+.about-me-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;  
+}
+
+
+.profile-pic-container {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.profile-pic-wrapper {
+    flex: 0 0 auto;
+}
+
+.profile-pic-wrapper img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10%;
+    display: block;
+}
+
+
+.profile-pic {
+    width: 100%;  /* Adjust width as necessary */
+    max-width: 300px; /* Set a maximum width */
+    margin: 0 auto; /* Center the image */
+}
+
+.intro {
+    color: #fff;
+    padding: 20px;
+}
+
+
+.slim-rectangular-box {
+    display: flex;
+    justify-content: center;
+}
+
+.slim-rectangular-box a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.organization-box {
+    color: #000;
+    border: 1px solid #444;
+    padding: 20px;
+    margin: 40px;
+    background-color: #444;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;  /* Gives a hint that it's clickable */
+}
+
+.organization-box:hover {
+    color: #000;
+    background-color: #ffd700; /* ffd700 == Yellow */
+    
+}
+
+.organization-box img {
+    max-width: 100px;  /* or adjust as needed */
+    height: auto;
+    margin-bottom: 10px;  /* space between the logo and text */
+}
+
+/* Hide the hamburger & mobile navigation by default */
+.hamburger-menu, .mobile-nav {
+    display: none;
+}
+
+/* Style the hamburger icon */
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    /* Show hamburger & hide default navigation on mobile */
+    
+    nav{
+        padding: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Style mobile nav */
+    .mobile-nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        background-color: #333;
+    }
+    .mobile-nav a {
+        padding: 10px;
+        border-top: 1px solid #555;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    color: inherit;
+}
